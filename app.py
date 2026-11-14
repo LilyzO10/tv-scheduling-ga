@@ -152,9 +152,10 @@ co_r = st.sidebar.slider(
     help="Chance that two parents swap parts of their schedules.",
 )
 mut_r = st.sidebar.slider(
-    "Mutation Rate (MUT_R)", 0.01, 0.05, 0.02, 0.01,
-    help="Chance that a child schedule gets one random program change.",
+    "Mutation Rate (MUT_R)", 0.01, 0.2, 0.2, 0.01,
+    help="Default is 0.2. The experiment range is 0.01 to 0.05.",
 )
+st.sidebar.caption("Recommended experiment range: 0.01 to 0.05")
 run_single = st.sidebar.button("🚀 Run Genetic Algorithm", type="primary")
 
 with st.sidebar.expander("Advanced settings"):
