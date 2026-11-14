@@ -97,6 +97,7 @@ def show_table(df):
     st.dataframe(
         df,
         hide_index=True,
+        height=700,
         column_config={
             "Rating": st.column_config.ProgressColumn(
                 "Rating", min_value=0.0, max_value=MAX_RATING, format="%.1f"
@@ -233,3 +234,4 @@ with tab_data:
     st.write("The (modified) program ratings the algorithm is using. Rows are programs, columns are hours.")
     data_df = pd.DataFrame(ratings, index=[f"{h:02d}:00" for h in all_time_slots]).T
     st.dataframe(data_df)
+
